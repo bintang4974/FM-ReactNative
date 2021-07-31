@@ -1,10 +1,13 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import 'react-native-gesture-handler';
 import { SplashScreen } from './pages';
 
 const App = () => {
   return (
-    <SplashScreen />
+    <NavigationContainer>
+      <SplashScreen />
+    </NavigationContainer>
   );
 };
 

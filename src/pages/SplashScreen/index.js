@@ -14,7 +14,8 @@ const SplashScreen = () => {
             <View style={{ height: 38 }} />
             <Text style={{
                 fontSize: 32,
-                color: '#020202'
+                color: '#020202',
+                fontFamily: 'Poppins-Medium'
             }}>Food Market</Text>
         </View>
     )
