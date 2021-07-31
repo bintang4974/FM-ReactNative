@@ -1,11 +1,10 @@
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
+import { SplashScreen } from './pages';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Hello Food Market App</Text>
-    </SafeAreaView>
+    <SplashScreen />
   );
 };
 
