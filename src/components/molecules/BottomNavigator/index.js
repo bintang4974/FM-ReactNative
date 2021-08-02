@@ -1,15 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { IcHomeOn, IcOrderOn, IcProfileOn } from '../../../assets';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { IcHomeOff, IcHomeOn, IcOrderOff, IcOrderOn, IcProfileOff, IcProfileOn } from '../../../assets';
 
-const Icon = ({ label }) => {
-    switch(label){
+const Icon = ({ label, focus }) => {
+    switch (label) {
         case 'Home':
-            return <IcHomeOn />
+            return focus ? <IcHomeOn /> : <IcHomeOff />
         case 'Order':
-            return <IcOrderOn />
+            return focus ? <IcOrderOn /> : <IcOrderOff />
         case 'Profile':
-            return <IcProfileOn />
+            return focus ? <IcProfileOn /> : <IcProfileOff />
         default:
             return <IcOrderOn />
     }
@@ -64,7 +64,7 @@ const BottomNavigator = ({ state, descriptors, navigation }) => {
                         onPress={onPress}
                         onLongPress={onLongPress}
                     >
-                        <Icon label={label} />
+                        <Icon label={label} focus={isFocused} />
                     </TouchableOpacity>
                 );
             })}
