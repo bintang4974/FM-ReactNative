@@ -28,7 +28,7 @@ export default Home
 
 const styles = StyleSheet.create({
     page: {
-        flex: 1,
+        flex: 1
     },
     foodCardContainer: {
         flexDirection: 'row',

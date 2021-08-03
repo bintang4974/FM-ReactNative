@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
@@ -13,7 +14,13 @@ const renderTabBar = props => (
             // width: '15%',
             // marginLeft: '3%'
         }}
-        style={{ backgroundColor: 'white' }}
+        style={{
+            backgroundColor: 'white',
+            elevation: 0,
+            shadowOpacity: 0,
+            borderBottomColor: '#F2F2F2',
+            borderBottomWidth: 1
+        }}
         tabStyle={{ width: 'auto' }}
         renderLabel={({ route, focused, color }) => (
             <Text style={{
@@ -27,9 +34,11 @@ const renderTabBar = props => (
 );
 
 const NewTaste = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={{ paddingTop: 8 }}>
-            <ItemListFood image={FoodDummy1} />
+            <ItemListFood image={FoodDummy1} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy2} />
             <ItemListFood image={FoodDummy3} />
             <ItemListFood image={FoodDummy4} />
@@ -38,23 +47,27 @@ const NewTaste = () => {
 };
 
 const Popular = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={{ paddingTop: 8 }}>
             <ItemListFood image={FoodDummy1} />
-            <ItemListFood image={FoodDummy2} />
             <ItemListFood image={FoodDummy3} />
+            <ItemListFood image={FoodDummy2} />
             <ItemListFood image={FoodDummy4} />
         </View>
     )
 };
 
 const Recommended = () => {
+    const navigation = useNavigation();
+    
     return (
         <View style={{ paddingTop: 8 }}>
             <ItemListFood image={FoodDummy1} />
+            <ItemListFood image={FoodDummy4} />
             <ItemListFood image={FoodDummy2} />
             <ItemListFood image={FoodDummy3} />
-            <ItemListFood image={FoodDummy4} />
         </View>
     )
 };
@@ -82,6 +95,7 @@ const HomeTabSection = () => {
             renderScene={renderScene}
             onIndexChange={setIndex}
             initialLayout={{ width: layout.width }}
+            style={{ backgroundColor: 'white' }}
         />
     )
 }
