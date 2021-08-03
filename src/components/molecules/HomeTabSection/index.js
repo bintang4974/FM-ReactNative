@@ -37,11 +37,11 @@ const NewTaste = () => {
     const navigation = useNavigation();
 
     return (
-        <View style={{ paddingTop: 8 }}>
-            <ItemListFood image={FoodDummy1} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy2} />
-            <ItemListFood image={FoodDummy3} />
-            <ItemListFood image={FoodDummy4} />
+        <View style={{ paddingTop: 8, paddingHorizontal: 24 }}>
+            <ItemListFood rating={3} image={FoodDummy1} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood rating={3} image={FoodDummy2} />
+            <ItemListFood rating={3} image={FoodDummy3} />
+            <ItemListFood rating={3} image={FoodDummy4} />
         </View>
     )
 };
@@ -50,11 +50,11 @@ const Popular = () => {
     const navigation = useNavigation();
 
     return (
-        <View style={{ paddingTop: 8 }}>
-            <ItemListFood image={FoodDummy1} />
-            <ItemListFood image={FoodDummy3} />
-            <ItemListFood image={FoodDummy2} />
-            <ItemListFood image={FoodDummy4} />
+        <View style={{ paddingTop: 8, paddingHorizontal: 24 }}>
+            <ItemListFood rating={3} image={FoodDummy1} />
+            <ItemListFood rating={3} image={FoodDummy3} />
+            <ItemListFood rating={3} image={FoodDummy2} />
+            <ItemListFood rating={3} image={FoodDummy4} />
         </View>
     )
 };
@@ -63,11 +63,11 @@ const Recommended = () => {
     const navigation = useNavigation();
     
     return (
-        <View style={{ paddingTop: 8 }}>
-            <ItemListFood image={FoodDummy1} />
-            <ItemListFood image={FoodDummy4} />
-            <ItemListFood image={FoodDummy2} />
-            <ItemListFood image={FoodDummy3} />
+        <View style={{ paddingTop: 8, paddingHorizontal: 24 }}>
+            <ItemListFood rating={3} image={FoodDummy1} />
+            <ItemListFood rating={3} image={FoodDummy4} />
+            <ItemListFood rating={3} image={FoodDummy2} />
+            <ItemListFood rating={3} image={FoodDummy3} />
         </View>
     )
 };
