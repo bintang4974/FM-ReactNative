@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { IlSuccessOrder } from '../../assets';
 import { Button, Gap } from '../../components';
 
-const SuccessOrder = () => {
+const SuccessOrder = ({ navigation }) => {
     return (
         <View style={styles.page}>
             <IlSuccessOrder />
@@ -25,7 +25,7 @@ const SuccessOrder = () => {
                     text="View My Order"
                     color="#8D92A3"
                     textColor="white"
-                    onPress={() => navigation.replace('MainApp')}
+                    onPress={() => navigation.replace('MainApp', {screen: 'Order'})}
                 />
             </View>
         </View>
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     page: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'white'
     },
     title: {
         fontSize: 20,
