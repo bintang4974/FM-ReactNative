@@ -3,9 +3,9 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { FoodDummy1 } from '../../assets';
 import { Button, Gap, Header, ItemListFood, ItemValue } from '../../components';
 
-const OrderSummary = ({ navigation }) => {
+const OrderDetail = () => {
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <Header
                 title="Payment"
                 subTitle="You deserve better meal"
@@ -34,9 +34,15 @@ const OrderSummary = ({ navigation }) => {
                 <ItemValue label="House No." value="A5 Hook" />
                 <ItemValue label="City" value="Bandung" />
             </View>
+            <View style={styles.content}>
+                <Text style={styles.label}>Order Status:</Text>
+                <ItemValue label="#FM209391" value="Paid" valueColor="#1ABC9C" />
+            </View>
             <View style={styles.button}>
                 <Button
-                    text="Checkout Now"
+                    text="Cancel My Order"
+                    color="#D9435E"
+                    textColor="white"
                     onPress={() => navigation.replace('SuccessOrder')}
                 />
             </View>
@@ -45,7 +51,7 @@ const OrderSummary = ({ navigation }) => {
     )
 }
 
-export default OrderSummary
+export default OrderDetail
 
 const styles = StyleSheet.create({
     content: {
