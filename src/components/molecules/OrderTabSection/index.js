@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
-import { FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4 } from '../../../assets';
+import { FoodDummy1, FoodDummy4 } from '../../../assets';
 import ItemListFood from '../ItemListFood';
 
 const renderTabBar = props => (
